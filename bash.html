@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee, #f6d365, #fda085);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.birthday-container {
+    text-align: center;
+    position: relative;
+}
+
+.birthday-text {
+    font-size: 4rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0;
+    animation: fall 5s linear infinite;
+}
+
+.confetti:nth-child(2n) {
+    background-color: #f00;
+}
+
+.confetti:nth-child(3n) {
+    background-color: #0f0;
+}
+
+.confetti:nth-child(4n) {
+    background-color: #00f;
+}
+
+.confetti:nth-child(5n) {
+    background-color: #f0f;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.confetti:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.confetti:nth-child(2) {
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.confetti:nth-child(3) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.confetti:nth-child(4) {
+    left: 40%;
+    animation-delay: 3s;
+}
+
+.confetti:nth-child(5) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.confetti:nth-child(6) {
+    left: 60%;
+    animation-delay: 5s;
+}
+
+.confetti:nth-child(7) {
+    left: 70%;
+    animation-delay: 6s;
+}
+
+.confetti:nth-child(8) {
+    left: 80%;
+    animation-delay: 7s;
+}
+
+.confetti:nth-child(9) {
+    left: 90%;
+    animation-delay: 8s;
+}
+
+.confetti:nth-child(10) {
+    left: 100%;
+    animation-delay: 9s;
+}
+</style>
+<body>
+    <div class="birthday-container">
+        <h1 class="birthday-text">Happy Birthday!</h1>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+    </div>
+</body>
+</html>
